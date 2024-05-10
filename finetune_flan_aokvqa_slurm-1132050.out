@@ -1,0 +1,1495 @@
+==========================================
+SLURM_JOB_ID = 1132050
+SLURM_NODELIST = gnode[007-008]
+SLURM_JOB_GPUS = 1
+==========================================
+conda environment activated
+Creating ssd_scratch/cvit/rafaelgetto directory
+mkdir: cannot create directory '/ssd_scratch/cvit/rafaelgetto': File exists
+mkdir: cannot create directory '/ssd_scratch/cvit/rafaelgetto/datasets': File exists
+mkdir: cannot create directory '/ssd_scratch/cvit/rafaelgetto/predictions': File exists
+mkdir: cannot create directory '/ssd_scratch/cvit/rafaelgetto/pretrained_models': File exists
+Dataset Copied
+Starting Training
+wandb: Currently logged in as: harshlunia7 (white_eagle). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in /home2/rafaelgetto/Cola_MGM/wandb/run-20240503_191649-flan_base_aok_blip_ofa_1
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run flan_base_aok_blip_ofa_1
+wandb: ⭐️ View project at https://wandb.ai/white_eagle/fine_tune_flan
+wandb: 🚀 View run at https://wandb.ai/white_eagle/fine_tune_flan/runs/flan_base_aok_blip_ofa_1
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[32m2024-05-03:19:16:55[0m | [36mdata[0m[36m:line 122[0m: [1mLoading aokvqa train dataset[0m
+[32m2024-05-03:19:16:57[0m | [36mdata[0m[36m:line 129[0m: [1mLoading dataset took 1.66 seconds[0m
+[32m2024-05-03:19:16:57[0m | [36mdata[0m[36m:line 122[0m: [1mLoading aokvqa val dataset[0m
+[32m2024-05-03:19:16:57[0m | [36mdata[0m[36m:line 129[0m: [1mLoading dataset took 0.05 seconds[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:19:16:57[0m | [36m__main__[0m[36m:line 348[0m: [1mTraining and Validation Dataloaders are created.[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/transformers/models/t5/modeling_t5.py:1583: FutureWarning: `T5ForConditionalGeneration.parallelize` is deprecated and will be removed in v5 of Transformers, you should load your model with `device_map='balanced'` in the call to `from_pretrained`. You can also provide your own `device_map` but it needs to be a dictionary module_name to device, so for instance {'encoder.block.0': 0, 'encoder.block.1': 1, ...}
+  warnings.warn(
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/transformers/models/t5/modeling_t5.py:924: FutureWarning: `T5Stack.parallelize` is deprecated and will be removed in v5 of Transformers, you should load your model with `device_map='balanced'` in the call to `from_pretrained`. You can also provide your own `device_map` but it needs to be a dictionary module_name to device, so for instance {'block.0': 0, 'block.1': 1, ...}
+  warnings.warn(
+[32m2024-05-03:19:17:39[0m | [36m__main__[0m[36m:line 375[0m: [1mModel is created.[0m
+[32m2024-05-03:19:17:39[0m | [36m__main__[0m[36m:line 380[0m: [1mInitiating Fine-Tuning for the model on our dataset[0m
+[32m2024-05-03:19:17:44[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  17.090229034423828[0m
+[32m2024-05-03:19:19:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  2.763568162918091[0m
+[32m2024-05-03:19:20:36[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  1.6516361236572266[0m
+[32m2024-05-03:19:21:55[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  0.7205770611763[0m
+[32m2024-05-03:19:23:17[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  1.8780665397644043[0m
+[32m2024-05-03:19:24:41[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  1.5946520566940308[0m
+[32m2024-05-03:19:26:08[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  1.2535845041275024[0m
+[32m2024-05-03:19:27:27[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  0.9730163216590881[0m
+[32m2024-05-03:19:28:48[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 0, Loss:  1.6244555711746216[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:19:29:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.6043941974639893[0m
+[32m2024-05-03:19:29:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.4413166046142578[0m
+[32m2024-05-03:19:29:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.36617255210876465[0m
+[32m2024-05-03:19:29:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.3533196449279785[0m
+[32m2024-05-03:19:29:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.303757905960083[0m
+[32m2024-05-03:19:29:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2715027332305908[0m
+[32m2024-05-03:19:29:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.24145865440368652[0m
+[32m2024-05-03:19:29:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.28275370597839355[0m
+[32m2024-05-03:19:29:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.24273443222045898[0m
+[32m2024-05-03:19:29:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24104046821594238[0m
+[32m2024-05-03:19:29:37[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2678108215332031[0m
+[32m2024-05-03:19:29:37[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31731224060058594[0m
+[32m2024-05-03:19:29:37[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.33510661125183105[0m
+[32m2024-05-03:19:29:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.24101591110229492[0m
+[32m2024-05-03:19:29:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3289041519165039[0m
+[32m2024-05-03:19:29:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.30837559700012207[0m
+[32m2024-05-03:19:29:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2926676273345947[0m
+[32m2024-05-03:19:29:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3399372100830078[0m
+[32m2024-05-03:19:29:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.4034297466278076[0m
+[32m2024-05-03:19:29:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24665307998657227[0m
+[32m2024-05-03:19:29:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.35485363006591797[0m
+[32m2024-05-03:19:29:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.24590301513671875[0m
+[32m2024-05-03:19:29:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.270648717880249[0m
+[32m2024-05-03:19:29:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28560757637023926[0m
+[32m2024-05-03:19:29:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2903590202331543[0m
+[32m2024-05-03:19:29:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2492997646331787[0m
+[32m2024-05-03:19:29:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2695193290710449[0m
+[32m2024-05-03:19:29:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2906966209411621[0m
+[32m2024-05-03:19:29:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.24862146377563477[0m
+[32m2024-05-03:19:29:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2752518653869629[0m
+[32m2024-05-03:19:29:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27129626274108887[0m
+[32m2024-05-03:19:29:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.263333797454834[0m
+[32m2024-05-03:19:29:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2889087200164795[0m
+[32m2024-05-03:19:29:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.40144991874694824[0m
+[32m2024-05-03:19:29:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.24281048774719238[0m
+[32m2024-05-03:19:29:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2071857452392578[0m
+[32m2024-05-03:19:29:45[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_0/val-da.json .[0m
+[32m2024-05-03:19:29:45[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  2.280421495437622[0m
+[32m2024-05-03:19:31:11[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  2.179948568344116[0m
+[32m2024-05-03:19:32:33[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  1.8377212285995483[0m
+[32m2024-05-03:19:33:52[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  1.2169383764266968[0m
+[32m2024-05-03:19:35:12[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  1.773689866065979[0m
+[32m2024-05-03:19:36:31[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  0.48705247044563293[0m
+[32m2024-05-03:19:37:49[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  0.9747196435928345[0m
+[32m2024-05-03:19:39:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  1.2681584358215332[0m
+[32m2024-05-03:19:40:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 1, Loss:  1.6424939632415771[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:19:41:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2851262092590332[0m
+[32m2024-05-03:19:41:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.29431700706481934[0m
+[32m2024-05-03:19:41:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.4153127670288086[0m
+[32m2024-05-03:19:41:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2842705249786377[0m
+[32m2024-05-03:19:41:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3240208625793457[0m
+[32m2024-05-03:19:41:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.27068209648132324[0m
+[32m2024-05-03:19:41:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.26035308837890625[0m
+[32m2024-05-03:19:41:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2836887836456299[0m
+[32m2024-05-03:19:41:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.24047231674194336[0m
+[32m2024-05-03:19:41:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.28442955017089844[0m
+[32m2024-05-03:19:41:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2715744972229004[0m
+[32m2024-05-03:19:41:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31249094009399414[0m
+[32m2024-05-03:19:41:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.31386327743530273[0m
+[32m2024-05-03:19:41:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.23767566680908203[0m
+[32m2024-05-03:19:41:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3258199691772461[0m
+[32m2024-05-03:19:41:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.2616291046142578[0m
+[32m2024-05-03:19:41:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.28841567039489746[0m
+[32m2024-05-03:19:41:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33176565170288086[0m
+[32m2024-05-03:19:41:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.4212336540222168[0m
+[32m2024-05-03:19:41:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24622368812561035[0m
+[32m2024-05-03:19:41:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.3610670566558838[0m
+[32m2024-05-03:19:41:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.24541854858398438[0m
+[32m2024-05-03:19:41:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.33948683738708496[0m
+[32m2024-05-03:19:41:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2824718952178955[0m
+[32m2024-05-03:19:41:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28734469413757324[0m
+[32m2024-05-03:19:41:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24598407745361328[0m
+[32m2024-05-03:19:41:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26982593536376953[0m
+[32m2024-05-03:19:41:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2876746654510498[0m
+[32m2024-05-03:19:41:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2266674041748047[0m
+[32m2024-05-03:19:41:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27303004264831543[0m
+[32m2024-05-03:19:41:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.26892709732055664[0m
+[32m2024-05-03:19:41:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2595353126525879[0m
+[32m2024-05-03:19:41:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 1.670717477798462[0m
+[32m2024-05-03:19:41:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.39924097061157227[0m
+[32m2024-05-03:19:41:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2603938579559326[0m
+[32m2024-05-03:19:41:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20763421058654785[0m
+[32m2024-05-03:19:41:30[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_1/val-da.json .[0m
+[32m2024-05-03:19:41:31[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  1.544694423675537[0m
+[32m2024-05-03:19:42:50[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  3.0618860721588135[0m
+[32m2024-05-03:19:44:12[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  2.4234728813171387[0m
+[32m2024-05-03:19:45:36[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  1.5086504220962524[0m
+[32m2024-05-03:19:46:55[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  0.5969294309616089[0m
+[32m2024-05-03:19:48:14[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  1.7901488542556763[0m
+[32m2024-05-03:19:49:33[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  1.2176040410995483[0m
+[32m2024-05-03:19:50:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  1.683759093284607[0m
+[32m2024-05-03:19:52:15[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 2, Loss:  0.6732932925224304[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:19:53:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.26477718353271484[0m
+[32m2024-05-03:19:53:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.28977155685424805[0m
+[32m2024-05-03:19:53:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.42669034004211426[0m
+[32m2024-05-03:19:53:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.28232550621032715[0m
+[32m2024-05-03:19:53:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3249235153198242[0m
+[32m2024-05-03:19:53:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.27114272117614746[0m
+[32m2024-05-03:19:53:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.26476216316223145[0m
+[32m2024-05-03:19:53:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.285428524017334[0m
+[32m2024-05-03:19:53:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.22063636779785156[0m
+[32m2024-05-03:19:53:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24102497100830078[0m
+[32m2024-05-03:19:53:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.27016305923461914[0m
+[32m2024-05-03:19:53:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3106513023376465[0m
+[32m2024-05-03:19:53:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28756213188171387[0m
+[32m2024-05-03:19:53:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.23776912689208984[0m
+[32m2024-05-03:19:53:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3576653003692627[0m
+[32m2024-05-03:19:53:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25986647605895996[0m
+[32m2024-05-03:19:53:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.28859901428222656[0m
+[32m2024-05-03:19:53:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.356548547744751[0m
+[32m2024-05-03:19:53:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.423525333404541[0m
+[32m2024-05-03:19:53:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24606919288635254[0m
+[32m2024-05-03:19:53:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2661402225494385[0m
+[32m2024-05-03:19:53:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.2453751564025879[0m
+[32m2024-05-03:19:53:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2701990604400635[0m
+[32m2024-05-03:19:53:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2857935428619385[0m
+[32m2024-05-03:19:53:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29047322273254395[0m
+[32m2024-05-03:19:53:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.23242592811584473[0m
+[32m2024-05-03:19:53:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.27097439765930176[0m
+[32m2024-05-03:19:53:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28534460067749023[0m
+[32m2024-05-03:19:53:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.26902246475219727[0m
+[32m2024-05-03:19:53:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.275815486907959[0m
+[32m2024-05-03:19:53:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2722971439361572[0m
+[32m2024-05-03:19:53:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30590367317199707[0m
+[32m2024-05-03:19:53:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3297700881958008[0m
+[32m2024-05-03:19:53:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.4273679256439209[0m
+[32m2024-05-03:19:53:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2611515522003174[0m
+[32m2024-05-03:19:53:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.25023794174194336[0m
+[32m2024-05-03:19:53:12[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_2/val-da.json .[0m
+[32m2024-05-03:19:53:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  1.213259220123291[0m
+[32m2024-05-03:19:54:35[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  1.91129732131958[0m
+[32m2024-05-03:19:55:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  1.9276658296585083[0m
+[32m2024-05-03:19:57:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  1.2816287279129028[0m
+[32m2024-05-03:19:58:36[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  2.3028523921966553[0m
+[32m2024-05-03:19:59:57[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  0.8160552382469177[0m
+[32m2024-05-03:20:01:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  0.742425799369812[0m
+[32m2024-05-03:20:02:40[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  2.1213717460632324[0m
+[32m2024-05-03:20:04:01[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 3, Loss:  1.7418984174728394[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:20:04:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2869536876678467[0m
+[32m2024-05-03:20:04:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24620294570922852[0m
+[32m2024-05-03:20:04:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3868899345397949[0m
+[32m2024-05-03:20:04:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.28310227394104004[0m
+[32m2024-05-03:20:04:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32343459129333496[0m
+[32m2024-05-03:20:04:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2684481143951416[0m
+[32m2024-05-03:20:04:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.29018068313598633[0m
+[32m2024-05-03:20:04:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2447681427001953[0m
+[32m2024-05-03:20:04:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2390143871307373[0m
+[32m2024-05-03:20:04:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23737835884094238[0m
+[32m2024-05-03:20:04:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.27234339714050293[0m
+[32m2024-05-03:20:04:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.318037748336792[0m
+[32m2024-05-03:20:04:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28769612312316895[0m
+[32m2024-05-03:20:04:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.24068927764892578[0m
+[32m2024-05-03:20:04:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3281111717224121[0m
+[32m2024-05-03:20:04:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.2621135711669922[0m
+[32m2024-05-03:20:04:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.289808988571167[0m
+[32m2024-05-03:20:04:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3586440086364746[0m
+[32m2024-05-03:20:04:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.42769336700439453[0m
+[32m2024-05-03:20:04:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24595880508422852[0m
+[32m2024-05-03:20:04:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2691187858581543[0m
+[32m2024-05-03:20:04:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.24895668029785156[0m
+[32m2024-05-03:20:04:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2668604850769043[0m
+[32m2024-05-03:20:04:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28194546699523926[0m
+[32m2024-05-03:20:04:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2925996780395508[0m
+[32m2024-05-03:20:04:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2279062271118164[0m
+[32m2024-05-03:20:04:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2674868106842041[0m
+[32m2024-05-03:20:04:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28996872901916504[0m
+[32m2024-05-03:20:04:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.22640228271484375[0m
+[32m2024-05-03:20:04:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 1.6186835765838623[0m
+[32m2024-05-03:20:04:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.266038179397583[0m
+[32m2024-05-03:20:04:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.301821231842041[0m
+[32m2024-05-03:20:04:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.32599878311157227[0m
+[32m2024-05-03:20:05:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.4179270267486572[0m
+[32m2024-05-03:20:05:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26108622550964355[0m
+[32m2024-05-03:20:05:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2054452896118164[0m
+[32m2024-05-03:20:05:00[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_3/val-da.json .[0m
+[32m2024-05-03:20:05:01[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.284194827079773[0m
+[32m2024-05-03:20:06:24[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.0629966259002686[0m
+[32m2024-05-03:20:07:50[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.9359878301620483[0m
+[32m2024-05-03:20:09:11[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.4913281202316284[0m
+[32m2024-05-03:20:10:35[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.9743962287902832[0m
+[32m2024-05-03:20:12:00[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  0.4993271827697754[0m
+[32m2024-05-03:20:13:25[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.5878772735595703[0m
+[32m2024-05-03:20:14:45[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  0.9884580969810486[0m
+[32m2024-05-03:20:16:10[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 4, Loss:  1.366125226020813[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:20:16:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.27361392974853516[0m
+[32m2024-05-03:20:16:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2886638641357422[0m
+[32m2024-05-03:20:16:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.38501763343811035[0m
+[32m2024-05-03:20:16:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2649519443511963[0m
+[32m2024-05-03:20:16:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32497262954711914[0m
+[32m2024-05-03:20:16:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26797986030578613[0m
+[32m2024-05-03:20:16:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.2827115058898926[0m
+[32m2024-05-03:20:16:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.261533260345459[0m
+[32m2024-05-03:20:16:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.24005722999572754[0m
+[32m2024-05-03:20:16:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23856425285339355[0m
+[32m2024-05-03:20:16:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2698252201080322[0m
+[32m2024-05-03:20:17:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3144676685333252[0m
+[32m2024-05-03:20:17:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.3129429817199707[0m
+[32m2024-05-03:20:17:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21602225303649902[0m
+[32m2024-05-03:20:17:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3257768154144287[0m
+[32m2024-05-03:20:17:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.2583916187286377[0m
+[32m2024-05-03:20:17:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.29027271270751953[0m
+[32m2024-05-03:20:17:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3538248538970947[0m
+[32m2024-05-03:20:17:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.266925573348999[0m
+[32m2024-05-03:20:17:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24642133712768555[0m
+[32m2024-05-03:20:17:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2675189971923828[0m
+[32m2024-05-03:20:17:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.32857489585876465[0m
+[32m2024-05-03:20:17:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2749621868133545[0m
+[32m2024-05-03:20:17:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28469324111938477[0m
+[32m2024-05-03:20:17:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2877359390258789[0m
+[32m2024-05-03:20:17:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2466425895690918[0m
+[32m2024-05-03:20:17:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26540136337280273[0m
+[32m2024-05-03:20:17:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28505945205688477[0m
+[32m2024-05-03:20:17:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2700347900390625[0m
+[32m2024-05-03:20:17:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27463746070861816[0m
+[32m2024-05-03:20:17:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2701282501220703[0m
+[32m2024-05-03:20:17:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30283641815185547[0m
+[32m2024-05-03:20:17:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3257484436035156[0m
+[32m2024-05-03:20:17:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2665994167327881[0m
+[32m2024-05-03:20:17:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2621877193450928[0m
+[32m2024-05-03:20:17:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.24949979782104492[0m
+[32m2024-05-03:20:17:07[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_4/val-da.json .[0m
+[32m2024-05-03:20:17:08[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.602379560470581[0m
+[32m2024-05-03:20:18:27[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.5042768716812134[0m
+[32m2024-05-03:20:19:48[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.4668984413146973[0m
+[32m2024-05-03:20:21:12[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.505895972251892[0m
+[32m2024-05-03:20:22:30[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.5257693529129028[0m
+[32m2024-05-03:20:23:48[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  0.9842656254768372[0m
+[32m2024-05-03:20:25:06[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  0.7325316071510315[0m
+[32m2024-05-03:20:26:25[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.9432748556137085[0m
+[32m2024-05-03:20:27:43[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 5, Loss:  1.1607028245925903[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:20:28:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.29209423065185547[0m
+[32m2024-05-03:20:28:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.29152846336364746[0m
+[32m2024-05-03:20:28:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3844327926635742[0m
+[32m2024-05-03:20:28:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2633814811706543[0m
+[32m2024-05-03:20:28:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3251533508300781[0m
+[32m2024-05-03:20:28:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2693202495574951[0m
+[32m2024-05-03:20:28:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21881341934204102[0m
+[32m2024-05-03:20:28:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.26114392280578613[0m
+[32m2024-05-03:20:28:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2184739112854004[0m
+[32m2024-05-03:20:28:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23955535888671875[0m
+[32m2024-05-03:20:28:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.26788902282714844[0m
+[32m2024-05-03:20:28:32[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31395936012268066[0m
+[32m2024-05-03:20:28:32[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28794312477111816[0m
+[32m2024-05-03:20:28:32[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21709918975830078[0m
+[32m2024-05-03:20:28:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.32589006423950195[0m
+[32m2024-05-03:20:28:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.2585451602935791[0m
+[32m2024-05-03:20:28:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31105923652648926[0m
+[32m2024-05-03:20:28:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.353954553604126[0m
+[32m2024-05-03:20:28:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.2661318778991699[0m
+[32m2024-05-03:20:28:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24762415885925293[0m
+[32m2024-05-03:20:28:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2688567638397217[0m
+[32m2024-05-03:20:28:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3116326332092285[0m
+[32m2024-05-03:20:28:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.26736974716186523[0m
+[32m2024-05-03:20:28:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28214240074157715[0m
+[32m2024-05-03:20:28:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2871847152709961[0m
+[32m2024-05-03:20:28:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2458341121673584[0m
+[32m2024-05-03:20:28:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26578259468078613[0m
+[32m2024-05-03:20:28:37[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2842855453491211[0m
+[32m2024-05-03:20:28:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 1.6662123203277588[0m
+[32m2024-05-03:20:28:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2755293846130371[0m
+[32m2024-05-03:20:28:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.26666808128356934[0m
+[32m2024-05-03:20:28:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30306172370910645[0m
+[32m2024-05-03:20:28:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3263261318206787[0m
+[32m2024-05-03:20:28:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26549649238586426[0m
+[32m2024-05-03:20:28:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2612032890319824[0m
+[32m2024-05-03:20:28:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.24713611602783203[0m
+[32m2024-05-03:20:28:41[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_5/val-da.json .[0m
+[32m2024-05-03:20:28:41[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  1.0823105573654175[0m
+[32m2024-05-03:20:30:04[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  0.7341212630271912[0m
+[32m2024-05-03:20:31:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  1.2519562244415283[0m
+[32m2024-05-03:20:32:41[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  0.587012767791748[0m
+[32m2024-05-03:20:33:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  0.908898651599884[0m
+[32m2024-05-03:20:35:17[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  0.34099215269088745[0m
+[32m2024-05-03:20:36:36[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  1.7086607217788696[0m
+[32m2024-05-03:20:37:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  0.7704024910926819[0m
+[32m2024-05-03:20:39:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 6, Loss:  0.40173277258872986[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:20:40:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2877480983734131[0m
+[32m2024-05-03:20:40:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2905266284942627[0m
+[32m2024-05-03:20:40:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.385469913482666[0m
+[32m2024-05-03:20:40:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26340270042419434[0m
+[32m2024-05-03:20:40:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32428646087646484[0m
+[32m2024-05-03:20:40:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26902246475219727[0m
+[32m2024-05-03:20:40:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.283372163772583[0m
+[32m2024-05-03:20:40:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2848832607269287[0m
+[32m2024-05-03:20:40:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.24055719375610352[0m
+[32m2024-05-03:20:40:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24197030067443848[0m
+[32m2024-05-03:20:40:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.27332615852355957[0m
+[32m2024-05-03:20:40:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31639814376831055[0m
+[32m2024-05-03:20:40:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2890028953552246[0m
+[32m2024-05-03:20:40:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2167203426361084[0m
+[32m2024-05-03:20:40:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.28352904319763184[0m
+[32m2024-05-03:20:40:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25926899909973145[0m
+[32m2024-05-03:20:40:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.29062628746032715[0m
+[32m2024-05-03:20:40:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.29050445556640625[0m
+[32m2024-05-03:20:40:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.268251895904541[0m
+[32m2024-05-03:20:40:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.2481067180633545[0m
+[32m2024-05-03:20:40:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26809263229370117[0m
+[32m2024-05-03:20:40:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31269335746765137[0m
+[32m2024-05-03:20:40:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2678029537200928[0m
+[32m2024-05-03:20:40:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2859349250793457[0m
+[32m2024-05-03:20:40:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28758692741394043[0m
+[32m2024-05-03:20:40:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24577999114990234[0m
+[32m2024-05-03:20:40:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2683696746826172[0m
+[32m2024-05-03:20:40:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2863311767578125[0m
+[32m2024-05-03:20:40:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.27050161361694336[0m
+[32m2024-05-03:20:40:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27394938468933105[0m
+[32m2024-05-03:20:40:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2680644989013672[0m
+[32m2024-05-03:20:40:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.3039731979370117[0m
+[32m2024-05-03:20:40:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2843325138092041[0m
+[32m2024-05-03:20:40:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2675809860229492[0m
+[32m2024-05-03:20:40:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26307106018066406[0m
+[32m2024-05-03:20:40:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20846223831176758[0m
+[32m2024-05-03:20:40:17[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_6/val-da.json .[0m
+[32m2024-05-03:20:40:17[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  1.7002997398376465[0m
+[32m2024-05-03:20:41:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  0.9896878004074097[0m
+[32m2024-05-03:20:42:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  0.7891750931739807[0m
+[32m2024-05-03:20:44:16[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  1.7331606149673462[0m
+[32m2024-05-03:20:45:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  1.932962417602539[0m
+[32m2024-05-03:20:47:00[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  0.6646791100502014[0m
+[32m2024-05-03:20:48:17[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  1.4298046827316284[0m
+[32m2024-05-03:20:49:37[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  0.4223411977291107[0m
+[32m2024-05-03:20:50:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 7, Loss:  0.961390495300293[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:20:51:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.290546178817749[0m
+[32m2024-05-03:20:51:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24594902992248535[0m
+[32m2024-05-03:20:51:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.40497732162475586[0m
+[32m2024-05-03:20:51:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26223063468933105[0m
+[32m2024-05-03:20:51:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3219935894012451[0m
+[32m2024-05-03:20:51:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26791882514953613[0m
+[32m2024-05-03:20:51:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21814632415771484[0m
+[32m2024-05-03:20:51:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.26195693016052246[0m
+[32m2024-05-03:20:51:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2183840274810791[0m
+[32m2024-05-03:20:51:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23796319961547852[0m
+[32m2024-05-03:20:51:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2688610553741455[0m
+[32m2024-05-03:20:51:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3116912841796875[0m
+[32m2024-05-03:20:51:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28870272636413574[0m
+[32m2024-05-03:20:51:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21701526641845703[0m
+[32m2024-05-03:20:51:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3050801753997803[0m
+[32m2024-05-03:20:51:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.26016807556152344[0m
+[32m2024-05-03:20:51:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31104350090026855[0m
+[32m2024-05-03:20:51:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.35328054428100586[0m
+[32m2024-05-03:20:51:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26630306243896484[0m
+[32m2024-05-03:20:51:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24619054794311523[0m
+[32m2024-05-03:20:51:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2677497863769531[0m
+[32m2024-05-03:20:51:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3096473217010498[0m
+[32m2024-05-03:20:51:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.30980491638183594[0m
+[32m2024-05-03:20:51:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.3259148597717285[0m
+[32m2024-05-03:20:51:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2872121334075928[0m
+[32m2024-05-03:20:51:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2462019920349121[0m
+[32m2024-05-03:20:51:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2891373634338379[0m
+[32m2024-05-03:20:51:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2838890552520752[0m
+[32m2024-05-03:20:51:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2677586078643799[0m
+[32m2024-05-03:20:51:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 1.6280322074890137[0m
+[32m2024-05-03:20:51:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2682030200958252[0m
+[32m2024-05-03:20:51:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.25916504859924316[0m
+[32m2024-05-03:20:51:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3466818332672119[0m
+[32m2024-05-03:20:51:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26603269577026367[0m
+[32m2024-05-03:20:51:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2608642578125[0m
+[32m2024-05-03:20:51:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.24669790267944336[0m
+[32m2024-05-03:20:51:57[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_7/val-da.json .[0m
+[32m2024-05-03:20:51:57[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  2.8128201961517334[0m
+[32m2024-05-03:20:53:14[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  1.1587780714035034[0m
+[32m2024-05-03:20:54:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  0.8612754344940186[0m
+[32m2024-05-03:20:55:51[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  0.9923468828201294[0m
+[32m2024-05-03:20:57:10[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  1.232709527015686[0m
+[32m2024-05-03:20:58:26[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  0.40311723947525024[0m
+[32m2024-05-03:20:59:46[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  0.7882792949676514[0m
+[32m2024-05-03:21:01:08[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  1.1863831281661987[0m
+[32m2024-05-03:21:02:32[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 8, Loss:  1.709254503250122[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:21:03:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.24922990798950195[0m
+[32m2024-05-03:21:03:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2457261085510254[0m
+[32m2024-05-03:21:03:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.31731343269348145[0m
+[32m2024-05-03:21:03:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26268911361694336[0m
+[32m2024-05-03:21:03:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.323040246963501[0m
+[32m2024-05-03:21:03:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.268322229385376[0m
+[32m2024-05-03:21:03:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21875286102294922[0m
+[32m2024-05-03:21:03:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2612130641937256[0m
+[32m2024-05-03:21:03:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.21785998344421387[0m
+[32m2024-05-03:21:03:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23904657363891602[0m
+[32m2024-05-03:21:03:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2676112651824951[0m
+[32m2024-05-03:21:03:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.311708927154541[0m
+[32m2024-05-03:21:03:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2883296012878418[0m
+[32m2024-05-03:21:03:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21744608879089355[0m
+[32m2024-05-03:21:03:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3492450714111328[0m
+[32m2024-05-03:21:03:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.2598836421966553[0m
+[32m2024-05-03:21:03:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31127357482910156[0m
+[32m2024-05-03:21:03:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3111851215362549[0m
+[32m2024-05-03:21:03:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26698851585388184[0m
+[32m2024-05-03:21:03:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.2457566261291504[0m
+[32m2024-05-03:21:03:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26642537117004395[0m
+[32m2024-05-03:21:03:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3106107711791992[0m
+[32m2024-05-03:21:03:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.31369495391845703[0m
+[32m2024-05-03:21:03:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.3272230625152588[0m
+[32m2024-05-03:21:03:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28778815269470215[0m
+[32m2024-05-03:21:03:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2456679344177246[0m
+[32m2024-05-03:21:03:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.28827905654907227[0m
+[32m2024-05-03:21:03:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2842090129852295[0m
+[32m2024-05-03:21:03:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2676575183868408[0m
+[32m2024-05-03:21:03:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2732698917388916[0m
+[32m2024-05-03:21:03:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.26768016815185547[0m
+[32m2024-05-03:21:03:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2597048282623291[0m
+[32m2024-05-03:21:03:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.284670352935791[0m
+[32m2024-05-03:21:03:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2661623954772949[0m
+[32m2024-05-03:21:03:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2613513469696045[0m
+[32m2024-05-03:21:03:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20617294311523438[0m
+[32m2024-05-03:21:03:25[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_8/val-da.json .[0m
+[32m2024-05-03:21:03:26[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.9689890742301941[0m
+[32m2024-05-03:21:04:49[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  1.2621755599975586[0m
+[32m2024-05-03:21:06:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.553939163684845[0m
+[32m2024-05-03:21:07:26[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.821256160736084[0m
+[32m2024-05-03:21:08:44[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.7140088677406311[0m
+[32m2024-05-03:21:10:02[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.6403716802597046[0m
+[32m2024-05-03:21:11:19[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.6795476675033569[0m
+[32m2024-05-03:21:12:38[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  1.5776695013046265[0m
+[32m2024-05-03:21:13:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 9, Loss:  0.45600610971450806[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:21:14:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.26380181312561035[0m
+[32m2024-05-03:21:14:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24562883377075195[0m
+[32m2024-05-03:21:14:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.32317161560058594[0m
+[32m2024-05-03:21:14:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26157593727111816[0m
+[32m2024-05-03:21:14:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3225703239440918[0m
+[32m2024-05-03:21:14:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26728343963623047[0m
+[32m2024-05-03:21:14:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.2388474941253662[0m
+[32m2024-05-03:21:14:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2612786293029785[0m
+[32m2024-05-03:21:14:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2397921085357666[0m
+[32m2024-05-03:21:14:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23846173286437988[0m
+[32m2024-05-03:21:14:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.26793742179870605[0m
+[32m2024-05-03:21:14:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3111264705657959[0m
+[32m2024-05-03:21:14:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28864049911499023[0m
+[32m2024-05-03:21:14:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2172098159790039[0m
+[32m2024-05-03:21:14:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3495364189147949[0m
+[32m2024-05-03:21:14:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.259188175201416[0m
+[32m2024-05-03:21:14:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31063365936279297[0m
+[32m2024-05-03:21:14:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33344554901123047[0m
+[32m2024-05-03:21:14:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26653599739074707[0m
+[32m2024-05-03:21:14:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24728608131408691[0m
+[32m2024-05-03:21:14:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26769351959228516[0m
+[32m2024-05-03:21:14:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31033945083618164[0m
+[32m2024-05-03:21:14:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.26929426193237305[0m
+[32m2024-05-03:21:14:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.32695531845092773[0m
+[32m2024-05-03:21:14:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2876102924346924[0m
+[32m2024-05-03:21:14:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24620628356933594[0m
+[32m2024-05-03:21:14:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2660655975341797[0m
+[32m2024-05-03:21:14:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2834656238555908[0m
+[32m2024-05-03:21:14:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.26696205139160156[0m
+[32m2024-05-03:21:14:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27752017974853516[0m
+[32m2024-05-03:21:14:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2678511142730713[0m
+[32m2024-05-03:21:14:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2597525119781494[0m
+[32m2024-05-03:21:14:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 1.6052563190460205[0m
+[32m2024-05-03:21:14:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2666447162628174[0m
+[32m2024-05-03:21:14:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2609598636627197[0m
+[32m2024-05-03:21:14:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2059316635131836[0m
+[32m2024-05-03:21:14:51[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_9/val-da.json .[0m
+[32m2024-05-03:21:14:51[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.6456804871559143[0m
+[32m2024-05-03:21:16:14[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.49329885840415955[0m
+[32m2024-05-03:21:17:38[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.39033493399620056[0m
+[32m2024-05-03:21:18:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.657455325126648[0m
+[32m2024-05-03:21:20:12[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  1.61259925365448[0m
+[32m2024-05-03:21:21:28[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.7572248578071594[0m
+[32m2024-05-03:21:22:52[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.7313308715820312[0m
+[32m2024-05-03:21:24:10[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  1.3854597806930542[0m
+[32m2024-05-03:21:25:28[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 10, Loss:  0.8154883980751038[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:21:26:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2959733009338379[0m
+[32m2024-05-03:21:26:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.22399497032165527[0m
+[32m2024-05-03:21:26:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.4054861068725586[0m
+[32m2024-05-03:21:26:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26154351234436035[0m
+[32m2024-05-03:21:26:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3228468894958496[0m
+[32m2024-05-03:21:26:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26808929443359375[0m
+[32m2024-05-03:21:26:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21750187873840332[0m
+[32m2024-05-03:21:26:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2611653804779053[0m
+[32m2024-05-03:21:26:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.21809053421020508[0m
+[32m2024-05-03:21:26:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.2385852336883545[0m
+[32m2024-05-03:21:26:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.26792073249816895[0m
+[32m2024-05-03:21:26:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3109109401702881[0m
+[32m2024-05-03:21:26:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.288419246673584[0m
+[32m2024-05-03:21:26:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21701741218566895[0m
+[32m2024-05-03:21:26:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.34925031661987305[0m
+[32m2024-05-03:21:26:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25951290130615234[0m
+[32m2024-05-03:21:26:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.3113887310028076[0m
+[32m2024-05-03:21:26:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3315896987915039[0m
+[32m2024-05-03:21:26:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.3545079231262207[0m
+[32m2024-05-03:21:26:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24660277366638184[0m
+[32m2024-05-03:21:26:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2668488025665283[0m
+[32m2024-05-03:21:26:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3110160827636719[0m
+[32m2024-05-03:21:26:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.26673269271850586[0m
+[32m2024-05-03:21:26:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.328380823135376[0m
+[32m2024-05-03:21:26:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28788089752197266[0m
+[32m2024-05-03:21:26:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24660587310791016[0m
+[32m2024-05-03:21:26:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2657637596130371[0m
+[32m2024-05-03:21:26:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28200411796569824[0m
+[32m2024-05-03:21:26:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2674849033355713[0m
+[32m2024-05-03:21:26:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27435898780822754[0m
+[32m2024-05-03:21:26:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2689988613128662[0m
+[32m2024-05-03:21:26:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2592654228210449[0m
+[32m2024-05-03:21:26:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3045008182525635[0m
+[32m2024-05-03:21:26:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2657642364501953[0m
+[32m2024-05-03:21:26:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2610487937927246[0m
+[32m2024-05-03:21:26:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20610880851745605[0m
+[32m2024-05-03:21:26:22[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_10/val-da.json .[0m
+[32m2024-05-03:21:26:22[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  1.3716903924942017[0m
+[32m2024-05-03:21:27:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  1.3252753019332886[0m
+[32m2024-05-03:21:28:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  0.757997989654541[0m
+[32m2024-05-03:21:30:19[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  0.43652018904685974[0m
+[32m2024-05-03:21:31:38[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  0.9263526797294617[0m
+[32m2024-05-03:21:33:00[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  1.0659644603729248[0m
+[32m2024-05-03:21:34:22[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  0.582783043384552[0m
+[32m2024-05-03:21:35:42[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  1.1651338338851929[0m
+[32m2024-05-03:21:36:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 11, Loss:  1.8986499309539795[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:21:37:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.261216402053833[0m
+[32m2024-05-03:21:37:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24609804153442383[0m
+[32m2024-05-03:21:37:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3397049903869629[0m
+[32m2024-05-03:21:37:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26169824600219727[0m
+[32m2024-05-03:21:37:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32327866554260254[0m
+[32m2024-05-03:21:37:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2684464454650879[0m
+[32m2024-05-03:21:37:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.2188882827758789[0m
+[32m2024-05-03:21:37:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2610511779785156[0m
+[32m2024-05-03:21:37:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.21845602989196777[0m
+[32m2024-05-03:21:37:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23837566375732422[0m
+[32m2024-05-03:21:37:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.27008700370788574[0m
+[32m2024-05-03:21:37:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31329822540283203[0m
+[32m2024-05-03:21:37:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28879737854003906[0m
+[32m2024-05-03:21:37:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21759319305419922[0m
+[32m2024-05-03:21:37:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3481409549713135[0m
+[32m2024-05-03:21:37:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25989484786987305[0m
+[32m2024-05-03:21:37:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31073975563049316[0m
+[32m2024-05-03:21:37:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3323054313659668[0m
+[32m2024-05-03:21:37:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26703572273254395[0m
+[32m2024-05-03:21:37:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.2459719181060791[0m
+[32m2024-05-03:21:37:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26751255989074707[0m
+[32m2024-05-03:21:37:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3115401268005371[0m
+[32m2024-05-03:21:37:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.3112034797668457[0m
+[32m2024-05-03:21:37:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.3268458843231201[0m
+[32m2024-05-03:21:37:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28771305084228516[0m
+[32m2024-05-03:21:37:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24691200256347656[0m
+[32m2024-05-03:21:37:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2922980785369873[0m
+[32m2024-05-03:21:37:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.30466341972351074[0m
+[32m2024-05-03:21:37:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.267789363861084[0m
+[32m2024-05-03:21:37:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2742593288421631[0m
+[32m2024-05-03:21:37:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.26726484298706055[0m
+[32m2024-05-03:21:37:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30322790145874023[0m
+[32m2024-05-03:21:37:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 1.6309409141540527[0m
+[32m2024-05-03:21:37:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2674722671508789[0m
+[32m2024-05-03:21:37:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26174306869506836[0m
+[32m2024-05-03:21:37:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2054452896118164[0m
+[32m2024-05-03:21:37:55[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_11/val-da.json .[0m
+[32m2024-05-03:21:37:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.6569051146507263[0m
+[32m2024-05-03:21:39:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.6360096335411072[0m
+[32m2024-05-03:21:40:32[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.43240591883659363[0m
+[32m2024-05-03:21:41:55[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  1.6540426015853882[0m
+[32m2024-05-03:21:43:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.7732353806495667[0m
+[32m2024-05-03:21:44:38[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.47254496812820435[0m
+[32m2024-05-03:21:46:01[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  1.5520268678665161[0m
+[32m2024-05-03:21:47:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.399049311876297[0m
+[32m2024-05-03:21:48:37[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 12, Loss:  0.6537383198738098[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:21:49:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2942335605621338[0m
+[32m2024-05-03:21:49:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2256755828857422[0m
+[32m2024-05-03:21:49:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3170909881591797[0m
+[32m2024-05-03:21:49:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2619333267211914[0m
+[32m2024-05-03:21:49:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32472729682922363[0m
+[32m2024-05-03:21:49:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26779699325561523[0m
+[32m2024-05-03:21:49:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21740317344665527[0m
+[32m2024-05-03:21:49:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.28299403190612793[0m
+[32m2024-05-03:21:49:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.21768975257873535[0m
+[32m2024-05-03:21:49:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23860859870910645[0m
+[32m2024-05-03:21:49:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2250509262084961[0m
+[32m2024-05-03:21:49:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.311948299407959[0m
+[32m2024-05-03:21:49:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28900766372680664[0m
+[32m2024-05-03:21:49:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2171318531036377[0m
+[32m2024-05-03:21:49:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3496127128601074[0m
+[32m2024-05-03:21:49:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25850677490234375[0m
+[32m2024-05-03:21:49:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.3109097480773926[0m
+[32m2024-05-03:21:49:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.333756685256958[0m
+[32m2024-05-03:21:49:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26734232902526855[0m
+[32m2024-05-03:21:49:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24616670608520508[0m
+[32m2024-05-03:21:49:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26783251762390137[0m
+[32m2024-05-03:21:49:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31082725524902344[0m
+[32m2024-05-03:21:49:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.3106839656829834[0m
+[32m2024-05-03:21:49:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2833521366119385[0m
+[32m2024-05-03:21:49:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.26954102516174316[0m
+[32m2024-05-03:21:49:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2465963363647461[0m
+[32m2024-05-03:21:49:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2654886245727539[0m
+[32m2024-05-03:21:49:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.32723283767700195[0m
+[32m2024-05-03:21:49:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.26742124557495117[0m
+[32m2024-05-03:21:49:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27336931228637695[0m
+[32m2024-05-03:21:49:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.26720452308654785[0m
+[32m2024-05-03:21:49:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30272793769836426[0m
+[32m2024-05-03:21:49:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2833213806152344[0m
+[32m2024-05-03:21:49:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26589274406433105[0m
+[32m2024-05-03:21:49:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.25981712341308594[0m
+[32m2024-05-03:21:49:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2700614929199219[0m
+[32m2024-05-03:21:49:31[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_12/val-da.json .[0m
+[32m2024-05-03:21:49:31[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.20709073543548584[0m
+[32m2024-05-03:21:50:55[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.7350557446479797[0m
+[32m2024-05-03:21:52:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  1.107702374458313[0m
+[32m2024-05-03:21:53:31[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.9809350967407227[0m
+[32m2024-05-03:21:54:49[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.8243052363395691[0m
+[32m2024-05-03:21:56:09[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.6493285894393921[0m
+[32m2024-05-03:21:57:28[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.5397410988807678[0m
+[32m2024-05-03:21:58:48[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  0.6380658149719238[0m
+[32m2024-05-03:22:00:10[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 13, Loss:  1.3558435440063477[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:22:00:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.24761199951171875[0m
+[32m2024-05-03:22:00:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.22339677810668945[0m
+[32m2024-05-03:22:00:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.317594051361084[0m
+[32m2024-05-03:22:00:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26218223571777344[0m
+[32m2024-05-03:22:00:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.323138952255249[0m
+[32m2024-05-03:22:00:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26839113235473633[0m
+[32m2024-05-03:22:00:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21847844123840332[0m
+[32m2024-05-03:22:00:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.21859979629516602[0m
+[32m2024-05-03:22:00:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.21968889236450195[0m
+[32m2024-05-03:22:00:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23842096328735352[0m
+[32m2024-05-03:22:00:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22469592094421387[0m
+[32m2024-05-03:22:00:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31171679496765137[0m
+[32m2024-05-03:22:01:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28868842124938965[0m
+[32m2024-05-03:22:01:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21726465225219727[0m
+[32m2024-05-03:22:01:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.24140453338623047[0m
+[32m2024-05-03:22:01:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25979018211364746[0m
+[32m2024-05-03:22:01:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.3109312057495117[0m
+[32m2024-05-03:22:01:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33483314514160156[0m
+[32m2024-05-03:22:01:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26682138442993164[0m
+[32m2024-05-03:22:01:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.2465958595275879[0m
+[32m2024-05-03:22:01:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2681560516357422[0m
+[32m2024-05-03:22:01:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31107187271118164[0m
+[32m2024-05-03:22:01:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.31047725677490234[0m
+[32m2024-05-03:22:01:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28348565101623535[0m
+[32m2024-05-03:22:01:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28822827339172363[0m
+[32m2024-05-03:22:01:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24649500846862793[0m
+[32m2024-05-03:22:01:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2659423351287842[0m
+[32m2024-05-03:22:01:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28318238258361816[0m
+[32m2024-05-03:22:01:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2681136131286621[0m
+[32m2024-05-03:22:01:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2737865447998047[0m
+[32m2024-05-03:22:01:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2695460319519043[0m
+[32m2024-05-03:22:01:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.303447961807251[0m
+[32m2024-05-03:22:01:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3053464889526367[0m
+[32m2024-05-03:22:01:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2658390998840332[0m
+[32m2024-05-03:22:01:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26064562797546387[0m
+[32m2024-05-03:22:01:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20697832107543945[0m
+[32m2024-05-03:22:01:07[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_13/val-da.json .[0m
+[32m2024-05-03:22:01:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  1.5759779214859009[0m
+[32m2024-05-03:22:02:27[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  1.0290888547897339[0m
+[32m2024-05-03:22:03:44[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  0.9678987264633179[0m
+[32m2024-05-03:22:05:04[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  1.2356414794921875[0m
+[32m2024-05-03:22:06:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  0.18817709386348724[0m
+[32m2024-05-03:22:07:43[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  0.3285306394100189[0m
+[32m2024-05-03:22:09:00[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  0.7158424854278564[0m
+[32m2024-05-03:22:10:19[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  0.3041728138923645[0m
+[32m2024-05-03:22:11:41[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 14, Loss:  0.6270701885223389[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:22:12:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2887537479400635[0m
+[32m2024-05-03:22:12:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2237100601196289[0m
+[32m2024-05-03:22:12:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.2966268062591553[0m
+[32m2024-05-03:22:12:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2634775638580322[0m
+[32m2024-05-03:22:12:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3241274356842041[0m
+[32m2024-05-03:22:12:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26919078826904297[0m
+[32m2024-05-03:22:12:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21853995323181152[0m
+[32m2024-05-03:22:12:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2615642547607422[0m
+[32m2024-05-03:22:12:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.24050569534301758[0m
+[32m2024-05-03:22:12:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23887991905212402[0m
+[32m2024-05-03:22:12:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22521281242370605[0m
+[32m2024-05-03:22:12:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.313460111618042[0m
+[32m2024-05-03:22:12:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28984713554382324[0m
+[32m2024-05-03:22:12:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2167975902557373[0m
+[32m2024-05-03:22:12:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.34905028343200684[0m
+[32m2024-05-03:22:12:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25960254669189453[0m
+[32m2024-05-03:22:12:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31186580657958984[0m
+[32m2024-05-03:22:12:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3332216739654541[0m
+[32m2024-05-03:22:12:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26798200607299805[0m
+[32m2024-05-03:22:12:31[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24613285064697266[0m
+[32m2024-05-03:22:12:32[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26729488372802734[0m
+[32m2024-05-03:22:12:32[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31220173835754395[0m
+[32m2024-05-03:22:12:32[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24656462669372559[0m
+[32m2024-05-03:22:12:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.32762885093688965[0m
+[32m2024-05-03:22:12:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2888627052307129[0m
+[32m2024-05-03:22:12:33[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2248678207397461[0m
+[32m2024-05-03:22:12:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2662997245788574[0m
+[32m2024-05-03:22:12:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28307628631591797[0m
+[32m2024-05-03:22:12:34[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.26838231086730957[0m
+[32m2024-05-03:22:12:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2744460105895996[0m
+[32m2024-05-03:22:12:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2682831287384033[0m
+[32m2024-05-03:22:12:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.3056154251098633[0m
+[32m2024-05-03:22:12:35[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.3049890995025635[0m
+[32m2024-05-03:22:12:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26644253730773926[0m
+[32m2024-05-03:22:12:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2609570026397705[0m
+[32m2024-05-03:22:12:36[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20661664009094238[0m
+[32m2024-05-03:22:12:36[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_14/val-da.json .[0m
+[32m2024-05-03:22:12:37[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.835747480392456[0m
+[32m2024-05-03:22:14:00[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.18882766366004944[0m
+[32m2024-05-03:22:15:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  1.0199393033981323[0m
+[32m2024-05-03:22:16:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.499948114156723[0m
+[32m2024-05-03:22:17:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.22458720207214355[0m
+[32m2024-05-03:22:19:24[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.926202118396759[0m
+[32m2024-05-03:22:20:42[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  1.1628936529159546[0m
+[32m2024-05-03:22:21:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.9685891270637512[0m
+[32m2024-05-03:22:23:19[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 15, Loss:  0.8642022609710693[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:22:24:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.28799867630004883[0m
+[32m2024-05-03:22:24:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2249307632446289[0m
+[32m2024-05-03:22:24:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.2960350513458252[0m
+[32m2024-05-03:22:24:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2627241611480713[0m
+[32m2024-05-03:22:24:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.323819637298584[0m
+[32m2024-05-03:22:24:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26824069023132324[0m
+[32m2024-05-03:22:24:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21829867362976074[0m
+[32m2024-05-03:22:24:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2613844871520996[0m
+[32m2024-05-03:22:24:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.26317501068115234[0m
+[32m2024-05-03:22:24:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24100303649902344[0m
+[32m2024-05-03:22:24:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22536206245422363[0m
+[32m2024-05-03:22:24:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31313633918762207[0m
+[32m2024-05-03:22:24:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2900533676147461[0m
+[32m2024-05-03:22:24:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21700668334960938[0m
+[32m2024-05-03:22:24:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.34921884536743164[0m
+[32m2024-05-03:22:24:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25934791564941406[0m
+[32m2024-05-03:22:24:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.3113729953765869[0m
+[32m2024-05-03:22:24:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3341672420501709[0m
+[32m2024-05-03:22:24:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26749110221862793[0m
+[32m2024-05-03:22:24:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24719572067260742[0m
+[32m2024-05-03:22:24:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26844191551208496[0m
+[32m2024-05-03:22:24:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3118140697479248[0m
+[32m2024-05-03:22:24:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.3123307228088379[0m
+[32m2024-05-03:22:24:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28232789039611816[0m
+[32m2024-05-03:22:24:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29026198387145996[0m
+[32m2024-05-03:22:24:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.22717952728271484[0m
+[32m2024-05-03:22:24:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26661157608032227[0m
+[32m2024-05-03:22:24:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.28463006019592285[0m
+[32m2024-05-03:22:24:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.268665075302124[0m
+[32m2024-05-03:22:24:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2765533924102783[0m
+[32m2024-05-03:22:24:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2690739631652832[0m
+[32m2024-05-03:22:24:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30489659309387207[0m
+[32m2024-05-03:22:24:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.30658411979675293[0m
+[32m2024-05-03:22:24:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.24520134925842285[0m
+[32m2024-05-03:22:24:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26162147521972656[0m
+[32m2024-05-03:22:24:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20714783668518066[0m
+[32m2024-05-03:22:24:17[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_15/val-da.json .[0m
+[32m2024-05-03:22:24:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  0.6922449469566345[0m
+[32m2024-05-03:22:25:42[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  1.3279343843460083[0m
+[32m2024-05-03:22:27:03[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  0.2600952386856079[0m
+[32m2024-05-03:22:28:22[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  0.750483512878418[0m
+[32m2024-05-03:22:29:43[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  0.8090358376502991[0m
+[32m2024-05-03:22:30:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  1.0890017747879028[0m
+[32m2024-05-03:22:32:15[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  0.2029198259115219[0m
+[32m2024-05-03:22:33:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  1.185158371925354[0m
+[32m2024-05-03:22:34:52[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 16, Loss:  0.7634953260421753[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:22:35:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.29390406608581543[0m
+[32m2024-05-03:22:35:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2253398895263672[0m
+[32m2024-05-03:22:35:38[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.29578709602355957[0m
+[32m2024-05-03:22:35:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26174497604370117[0m
+[32m2024-05-03:22:35:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3272590637207031[0m
+[32m2024-05-03:22:35:39[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26795172691345215[0m
+[32m2024-05-03:22:35:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21983122825622559[0m
+[32m2024-05-03:22:35:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2613687515258789[0m
+[32m2024-05-03:22:35:40[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.260861873626709[0m
+[32m2024-05-03:22:35:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.238250732421875[0m
+[32m2024-05-03:22:35:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22528362274169922[0m
+[32m2024-05-03:22:35:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3157830238342285[0m
+[32m2024-05-03:22:35:41[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2904999256134033[0m
+[32m2024-05-03:22:35:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21619629859924316[0m
+[32m2024-05-03:22:35:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.34895873069763184[0m
+[32m2024-05-03:22:35:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.25829052925109863[0m
+[32m2024-05-03:22:35:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.31154894828796387[0m
+[32m2024-05-03:22:35:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3333151340484619[0m
+[32m2024-05-03:22:35:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26682233810424805[0m
+[32m2024-05-03:22:35:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24680709838867188[0m
+[32m2024-05-03:22:35:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2682013511657715[0m
+[32m2024-05-03:22:35:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3113245964050293[0m
+[32m2024-05-03:22:35:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.245955228805542[0m
+[32m2024-05-03:22:35:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2825295925140381[0m
+[32m2024-05-03:22:35:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29147934913635254[0m
+[32m2024-05-03:22:35:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2055220603942871[0m
+[32m2024-05-03:22:35:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26685500144958496[0m
+[32m2024-05-03:22:35:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2830331325531006[0m
+[32m2024-05-03:22:35:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2697873115539551[0m
+[32m2024-05-03:22:35:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27572011947631836[0m
+[32m2024-05-03:22:35:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2695930004119873[0m
+[32m2024-05-03:22:35:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30329346656799316[0m
+[32m2024-05-03:22:35:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2823493480682373[0m
+[32m2024-05-03:22:35:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26636195182800293[0m
+[32m2024-05-03:22:35:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26064205169677734[0m
+[32m2024-05-03:22:35:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20633292198181152[0m
+[32m2024-05-03:22:35:49[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_16/val-da.json .[0m
+[32m2024-05-03:22:35:49[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.8363938927650452[0m
+[32m2024-05-03:22:37:09[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.10998010635375977[0m
+[32m2024-05-03:22:38:28[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.5100528001785278[0m
+[32m2024-05-03:22:39:44[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.5176278948783875[0m
+[32m2024-05-03:22:41:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.8294753432273865[0m
+[32m2024-05-03:22:42:31[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.7428803443908691[0m
+[32m2024-05-03:22:43:51[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.22457556426525116[0m
+[32m2024-05-03:22:45:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.23394495248794556[0m
+[32m2024-05-03:22:46:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 17, Loss:  0.9189715385437012[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:22:47:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2904946804046631[0m
+[32m2024-05-03:22:47:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.22677159309387207[0m
+[32m2024-05-03:22:47:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3002359867095947[0m
+[32m2024-05-03:22:47:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2669188976287842[0m
+[32m2024-05-03:22:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32742977142333984[0m
+[32m2024-05-03:22:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.27188563346862793[0m
+[32m2024-05-03:22:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.2210242748260498[0m
+[32m2024-05-03:22:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.26383066177368164[0m
+[32m2024-05-03:22:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.24207067489624023[0m
+[32m2024-05-03:22:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.2413465976715088[0m
+[32m2024-05-03:22:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22964835166931152[0m
+[32m2024-05-03:22:47:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3235766887664795[0m
+[32m2024-05-03:22:47:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2941610813140869[0m
+[32m2024-05-03:22:47:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.22139811515808105[0m
+[32m2024-05-03:22:47:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.3560025691986084[0m
+[32m2024-05-03:22:47:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.28406620025634766[0m
+[32m2024-05-03:22:47:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2927725315093994[0m
+[32m2024-05-03:22:47:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3379380702972412[0m
+[32m2024-05-03:22:47:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.27597713470458984[0m
+[32m2024-05-03:22:47:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.25379443168640137[0m
+[32m2024-05-03:22:47:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2730073928833008[0m
+[32m2024-05-03:22:47:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3156242370605469[0m
+[32m2024-05-03:22:47:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.3205749988555908[0m
+[32m2024-05-03:22:47:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2863905429840088[0m
+[32m2024-05-03:22:47:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29060912132263184[0m
+[32m2024-05-03:22:47:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24935412406921387[0m
+[32m2024-05-03:22:47:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2925598621368408[0m
+[32m2024-05-03:22:47:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.29199719429016113[0m
+[32m2024-05-03:22:47:27[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2978534698486328[0m
+[32m2024-05-03:22:47:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.28109073638916016[0m
+[32m2024-05-03:22:47:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27432703971862793[0m
+[32m2024-05-03:22:47:28[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.31355786323547363[0m
+[32m2024-05-03:22:47:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2868807315826416[0m
+[32m2024-05-03:22:47:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2517845630645752[0m
+[32m2024-05-03:22:47:29[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26526355743408203[0m
+[32m2024-05-03:22:47:30[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20899677276611328[0m
+[32m2024-05-03:22:47:30[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_17/val-da.json .[0m
+[32m2024-05-03:22:47:30[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.38949161767959595[0m
+[32m2024-05-03:22:48:52[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  1.0767797231674194[0m
+[32m2024-05-03:22:50:15[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.885038435459137[0m
+[32m2024-05-03:22:51:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.5021678805351257[0m
+[32m2024-05-03:22:53:04[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  1.1478416919708252[0m
+[32m2024-05-03:22:54:27[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.42123931646347046[0m
+[32m2024-05-03:22:55:47[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.2989793121814728[0m
+[32m2024-05-03:22:57:09[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.5339058041572571[0m
+[32m2024-05-03:22:58:28[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 18, Loss:  0.44690486788749695[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:22:59:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2944056987762451[0m
+[32m2024-05-03:22:59:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24982690811157227[0m
+[32m2024-05-03:22:59:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3445475101470947[0m
+[32m2024-05-03:22:59:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26447176933288574[0m
+[32m2024-05-03:22:59:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.33240389823913574[0m
+[32m2024-05-03:22:59:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2736186981201172[0m
+[32m2024-05-03:22:59:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.22538304328918457[0m
+[32m2024-05-03:22:59:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2681279182434082[0m
+[32m2024-05-03:22:59:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2646772861480713[0m
+[32m2024-05-03:22:59:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24178385734558105[0m
+[32m2024-05-03:22:59:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22959613800048828[0m
+[32m2024-05-03:22:59:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3159639835357666[0m
+[32m2024-05-03:22:59:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2926337718963623[0m
+[32m2024-05-03:22:59:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2184891700744629[0m
+[32m2024-05-03:22:59:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.2425367832183838[0m
+[32m2024-05-03:22:59:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.26212143898010254[0m
+[32m2024-05-03:22:59:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.293062686920166[0m
+[32m2024-05-03:22:59:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33750104904174805[0m
+[32m2024-05-03:22:59:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.27399110794067383[0m
+[32m2024-05-03:22:59:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24999213218688965[0m
+[32m2024-05-03:22:59:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2701075077056885[0m
+[32m2024-05-03:22:59:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.32041263580322266[0m
+[32m2024-05-03:22:59:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2509582042694092[0m
+[32m2024-05-03:22:59:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.3322875499725342[0m
+[32m2024-05-03:22:59:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.291914701461792[0m
+[32m2024-05-03:22:59:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.22739601135253906[0m
+[32m2024-05-03:22:59:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.269214391708374[0m
+[32m2024-05-03:22:59:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2908167839050293[0m
+[32m2024-05-03:22:59:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2749607563018799[0m
+[32m2024-05-03:22:59:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2810187339782715[0m
+[32m2024-05-03:22:59:24[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2750406265258789[0m
+[32m2024-05-03:22:59:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.3078000545501709[0m
+[32m2024-05-03:22:59:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.28658199310302734[0m
+[32m2024-05-03:22:59:25[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.24748468399047852[0m
+[32m2024-05-03:22:59:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2635335922241211[0m
+[32m2024-05-03:22:59:26[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20833277702331543[0m
+[32m2024-05-03:22:59:26[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_18/val-da.json .[0m
+[32m2024-05-03:22:59:26[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.22953657805919647[0m
+[32m2024-05-03:23:00:50[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.27009817957878113[0m
+[32m2024-05-03:23:02:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.2091277837753296[0m
+[32m2024-05-03:23:03:36[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.6202946305274963[0m
+[32m2024-05-03:23:04:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.8988676071166992[0m
+[32m2024-05-03:23:06:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.32665205001831055[0m
+[32m2024-05-03:23:07:45[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.4765377640724182[0m
+[32m2024-05-03:23:09:04[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.5761095285415649[0m
+[32m2024-05-03:23:10:25[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 19, Loss:  0.5192331075668335[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:23:11:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.29395484924316406[0m
+[32m2024-05-03:23:11:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24996066093444824[0m
+[32m2024-05-03:23:11:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.30103015899658203[0m
+[32m2024-05-03:23:11:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.27059125900268555[0m
+[32m2024-05-03:23:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3291294574737549[0m
+[32m2024-05-03:23:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.27154016494750977[0m
+[32m2024-05-03:23:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.22085785865783691[0m
+[32m2024-05-03:23:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.26430797576904297[0m
+[32m2024-05-03:23:11:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.265305757522583[0m
+[32m2024-05-03:23:11:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24076437950134277[0m
+[32m2024-05-03:23:11:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22887969017028809[0m
+[32m2024-05-03:23:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3206660747528076[0m
+[32m2024-05-03:23:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2935512065887451[0m
+[32m2024-05-03:23:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21975326538085938[0m
+[32m2024-05-03:23:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.264462947845459[0m
+[32m2024-05-03:23:11:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.3287816047668457[0m
+[32m2024-05-03:23:11:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2926826477050781[0m
+[32m2024-05-03:23:11:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3380732536315918[0m
+[32m2024-05-03:23:11:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.27241015434265137[0m
+[32m2024-05-03:23:11:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24894332885742188[0m
+[32m2024-05-03:23:11:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.27100086212158203[0m
+[32m2024-05-03:23:11:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31639790534973145[0m
+[32m2024-05-03:23:11:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24923300743103027[0m
+[32m2024-05-03:23:11:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28681302070617676[0m
+[32m2024-05-03:23:11:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29181504249572754[0m
+[32m2024-05-03:23:11:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24871611595153809[0m
+[32m2024-05-03:23:11:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.27017927169799805[0m
+[32m2024-05-03:23:11:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2937502861022949[0m
+[32m2024-05-03:23:11:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.27580976486206055[0m
+[32m2024-05-03:23:11:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2817831039428711[0m
+[32m2024-05-03:23:11:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27672243118286133[0m
+[32m2024-05-03:23:11:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2427504062652588[0m
+[32m2024-05-03:23:11:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2881307601928711[0m
+[32m2024-05-03:23:11:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2477247714996338[0m
+[32m2024-05-03:23:11:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2646968364715576[0m
+[32m2024-05-03:23:11:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20968317985534668[0m
+[32m2024-05-03:23:11:19[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_19/val-da.json .[0m
+[32m2024-05-03:23:11:20[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.7197210788726807[0m
+[32m2024-05-03:23:12:43[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.24438713490962982[0m
+[32m2024-05-03:23:14:08[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.2190667986869812[0m
+[32m2024-05-03:23:15:30[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.33067503571510315[0m
+[32m2024-05-03:23:16:51[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.5199858546257019[0m
+[32m2024-05-03:23:18:12[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.5575108528137207[0m
+[32m2024-05-03:23:19:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.1597299575805664[0m
+[32m2024-05-03:23:20:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.8532363176345825[0m
+[32m2024-05-03:23:22:21[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 20, Loss:  0.3104178011417389[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:23:23:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2957727909088135[0m
+[32m2024-05-03:23:23:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2478625774383545[0m
+[32m2024-05-03:23:23:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.2966587543487549[0m
+[32m2024-05-03:23:23:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.262814998626709[0m
+[32m2024-05-03:23:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32462477684020996[0m
+[32m2024-05-03:23:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2684001922607422[0m
+[32m2024-05-03:23:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.22132420539855957[0m
+[32m2024-05-03:23:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.19751501083374023[0m
+[32m2024-05-03:23:23:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2625560760498047[0m
+[32m2024-05-03:23:23:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23844218254089355[0m
+[32m2024-05-03:23:23:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22664618492126465[0m
+[32m2024-05-03:23:23:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.313185453414917[0m
+[32m2024-05-03:23:23:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2893497943878174[0m
+[32m2024-05-03:23:23:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21722197532653809[0m
+[32m2024-05-03:23:23:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.26250338554382324[0m
+[32m2024-05-03:23:23:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.30362486839294434[0m
+[32m2024-05-03:23:23:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.26795053482055664[0m
+[32m2024-05-03:23:23:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3346574306488037[0m
+[32m2024-05-03:23:23:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26732921600341797[0m
+[32m2024-05-03:23:23:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24663734436035156[0m
+[32m2024-05-03:23:23:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2682485580444336[0m
+[32m2024-05-03:23:23:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31772398948669434[0m
+[32m2024-05-03:23:23:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24943971633911133[0m
+[32m2024-05-03:23:23:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.26683735847473145[0m
+[32m2024-05-03:23:23:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29259490966796875[0m
+[32m2024-05-03:23:23:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.22813868522644043[0m
+[32m2024-05-03:23:23:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.27233409881591797[0m
+[32m2024-05-03:23:23:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.29636597633361816[0m
+[32m2024-05-03:23:23:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.27736902236938477[0m
+[32m2024-05-03:23:23:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2832214832305908[0m
+[32m2024-05-03:23:23:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2763803005218506[0m
+[32m2024-05-03:23:23:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.311115026473999[0m
+[32m2024-05-03:23:23:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2891511917114258[0m
+[32m2024-05-03:23:23:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.24870514869689941[0m
+[32m2024-05-03:23:23:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26537036895751953[0m
+[32m2024-05-03:23:23:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.21077275276184082[0m
+[32m2024-05-03:23:23:18[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_20/val-da.json .[0m
+[32m2024-05-03:23:23:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.8466936945915222[0m
+[32m2024-05-03:23:24:44[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.6881580948829651[0m
+[32m2024-05-03:23:26:05[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.8916306495666504[0m
+[32m2024-05-03:23:27:29[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.6777969598770142[0m
+[32m2024-05-03:23:28:52[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.7156440019607544[0m
+[32m2024-05-03:23:30:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.5875716805458069[0m
+[32m2024-05-03:23:31:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.36292365193367004[0m
+[32m2024-05-03:23:32:52[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.5354227423667908[0m
+[32m2024-05-03:23:34:17[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 21, Loss:  0.6177099943161011[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:23:35:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.29956936836242676[0m
+[32m2024-05-03:23:35:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.25093626976013184[0m
+[32m2024-05-03:23:35:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.30164527893066406[0m
+[32m2024-05-03:23:35:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2660636901855469[0m
+[32m2024-05-03:23:35:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3294713497161865[0m
+[32m2024-05-03:23:35:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2727334499359131[0m
+[32m2024-05-03:23:35:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.221771240234375[0m
+[32m2024-05-03:23:35:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2652895450592041[0m
+[32m2024-05-03:23:35:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2664022445678711[0m
+[32m2024-05-03:23:35:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24298977851867676[0m
+[32m2024-05-03:23:35:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22971010208129883[0m
+[32m2024-05-03:23:35:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3237433433532715[0m
+[32m2024-05-03:23:35:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2937600612640381[0m
+[32m2024-05-03:23:35:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2211470603942871[0m
+[32m2024-05-03:23:35:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.26587343215942383[0m
+[32m2024-05-03:23:35:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.35363221168518066[0m
+[32m2024-05-03:23:35:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.29382967948913574[0m
+[32m2024-05-03:23:35:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.34154391288757324[0m
+[32m2024-05-03:23:35:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.2721259593963623[0m
+[32m2024-05-03:23:35:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.2509751319885254[0m
+[32m2024-05-03:23:35:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2714219093322754[0m
+[32m2024-05-03:23:35:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3165261745452881[0m
+[32m2024-05-03:23:35:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2518777847290039[0m
+[32m2024-05-03:23:35:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28844356536865234[0m
+[32m2024-05-03:23:35:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2944655418395996[0m
+[32m2024-05-03:23:35:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.25107765197753906[0m
+[32m2024-05-03:23:35:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2715122699737549[0m
+[32m2024-05-03:23:35:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2917647361755371[0m
+[32m2024-05-03:23:35:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2752101421356201[0m
+[32m2024-05-03:23:35:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.28145408630371094[0m
+[32m2024-05-03:23:35:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27564024925231934[0m
+[32m2024-05-03:23:35:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.3100273609161377[0m
+[32m2024-05-03:23:35:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.28913378715515137[0m
+[32m2024-05-03:23:35:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.24788808822631836[0m
+[32m2024-05-03:23:35:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.28856348991394043[0m
+[32m2024-05-03:23:35:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20989394187927246[0m
+[32m2024-05-03:23:35:15[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_21/val-da.json .[0m
+[32m2024-05-03:23:35:15[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.3093627989292145[0m
+[32m2024-05-03:23:36:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.10550235211849213[0m
+[32m2024-05-03:23:38:00[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.49404001235961914[0m
+[32m2024-05-03:23:39:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.1497795283794403[0m
+[32m2024-05-03:23:40:43[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.9764606356620789[0m
+[32m2024-05-03:23:42:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.506135880947113[0m
+[32m2024-05-03:23:43:32[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.5275641679763794[0m
+[32m2024-05-03:23:44:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.6724769473075867[0m
+[32m2024-05-03:23:46:24[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 22, Loss:  0.9434381127357483[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:23:47:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2913179397583008[0m
+[32m2024-05-03:23:47:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24884939193725586[0m
+[32m2024-05-03:23:47:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3723127841949463[0m
+[32m2024-05-03:23:47:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26467013359069824[0m
+[32m2024-05-03:23:47:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3278992176055908[0m
+[32m2024-05-03:23:47:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2706294059753418[0m
+[32m2024-05-03:23:47:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.22150254249572754[0m
+[32m2024-05-03:23:47:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.19848370552062988[0m
+[32m2024-05-03:23:47:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2639129161834717[0m
+[32m2024-05-03:23:47:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24067950248718262[0m
+[32m2024-05-03:23:47:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22954225540161133[0m
+[32m2024-05-03:23:47:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31797003746032715[0m
+[32m2024-05-03:23:47:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.29259681701660156[0m
+[32m2024-05-03:23:47:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21897554397583008[0m
+[32m2024-05-03:23:47:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.26340341567993164[0m
+[32m2024-05-03:23:47:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.3055751323699951[0m
+[32m2024-05-03:23:47:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2927722930908203[0m
+[32m2024-05-03:23:47:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.31509828567504883[0m
+[32m2024-05-03:23:47:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26959967613220215[0m
+[32m2024-05-03:23:47:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24996662139892578[0m
+[32m2024-05-03:23:47:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.270859956741333[0m
+[32m2024-05-03:23:47:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31477904319763184[0m
+[32m2024-05-03:23:47:19[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24811482429504395[0m
+[32m2024-05-03:23:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28705406188964844[0m
+[32m2024-05-03:23:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2912254333496094[0m
+[32m2024-05-03:23:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24779748916625977[0m
+[32m2024-05-03:23:47:20[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26877903938293457[0m
+[32m2024-05-03:23:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2907569408416748[0m
+[32m2024-05-03:23:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2728612422943115[0m
+[32m2024-05-03:23:47:21[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27974796295166016[0m
+[32m2024-05-03:23:47:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27779650688171387[0m
+[32m2024-05-03:23:47:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.24164962768554688[0m
+[32m2024-05-03:23:47:22[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2877800464630127[0m
+[32m2024-05-03:23:47:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26937437057495117[0m
+[32m2024-05-03:23:47:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2634310722351074[0m
+[32m2024-05-03:23:47:23[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20849108695983887[0m
+[32m2024-05-03:23:47:23[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_22/val-da.json .[0m
+[32m2024-05-03:23:47:24[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  1.0046048164367676[0m
+[32m2024-05-03:23:48:49[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.9886917471885681[0m
+[32m2024-05-03:23:50:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.5335112810134888[0m
+[32m2024-05-03:23:51:38[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.3823910653591156[0m
+[32m2024-05-03:23:53:01[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.5547578930854797[0m
+[32m2024-05-03:23:54:21[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.6187572479248047[0m
+[32m2024-05-03:23:55:42[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.8431252241134644[0m
+[32m2024-05-03:23:56:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.3941485583782196[0m
+[32m2024-05-03:23:58:20[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 23, Loss:  0.5345770120620728[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-03:23:59:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2895355224609375[0m
+[32m2024-05-03:23:59:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24850869178771973[0m
+[32m2024-05-03:23:59:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3216371536254883[0m
+[32m2024-05-03:23:59:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.26902341842651367[0m
+[32m2024-05-03:23:59:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3276402950286865[0m
+[32m2024-05-03:23:59:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.24940133094787598[0m
+[32m2024-05-03:23:59:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.22010064125061035[0m
+[32m2024-05-03:23:59:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.26395392417907715[0m
+[32m2024-05-03:23:59:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.26479005813598633[0m
+[32m2024-05-03:23:59:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24010539054870605[0m
+[32m2024-05-03:23:59:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22957348823547363[0m
+[32m2024-05-03:23:59:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31922197341918945[0m
+[32m2024-05-03:23:59:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2981758117675781[0m
+[32m2024-05-03:23:59:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.22222065925598145[0m
+[32m2024-05-03:23:59:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.2708122730255127[0m
+[32m2024-05-03:23:59:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.2837357521057129[0m
+[32m2024-05-03:23:59:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2701070308685303[0m
+[32m2024-05-03:23:59:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.31771111488342285[0m
+[32m2024-05-03:23:59:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.2709331512451172[0m
+[32m2024-05-03:23:59:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24909377098083496[0m
+[32m2024-05-03:23:59:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2722618579864502[0m
+[32m2024-05-03:23:59:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.317385196685791[0m
+[32m2024-05-03:23:59:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.2495410442352295[0m
+[32m2024-05-03:23:59:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28815722465515137[0m
+[32m2024-05-03:23:59:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2986781597137451[0m
+[32m2024-05-03:23:59:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2481861114501953[0m
+[32m2024-05-03:23:59:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2687976360321045[0m
+[32m2024-05-03:23:59:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.29053258895874023[0m
+[32m2024-05-03:23:59:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.27411627769470215[0m
+[32m2024-05-03:23:59:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.28037214279174805[0m
+[32m2024-05-03:23:59:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2757711410522461[0m
+[32m2024-05-03:23:59:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2420947551727295[0m
+[32m2024-05-03:23:59:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.28687191009521484[0m
+[32m2024-05-03:23:59:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2919802665710449[0m
+[32m2024-05-03:23:59:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2636594772338867[0m
+[32m2024-05-03:23:59:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20987296104431152[0m
+[32m2024-05-03:23:59:15[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_23/val-da.json .[0m
+[32m2024-05-03:23:59:15[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.32300564646720886[0m
+[32m2024-05-04:00:00:41[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.5248451828956604[0m
+[32m2024-05-04:00:02:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.36276885867118835[0m
+[32m2024-05-04:00:03:29[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.5408769845962524[0m
+[32m2024-05-04:00:04:48[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.3236932158470154[0m
+[32m2024-05-04:00:06:11[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.691135585308075[0m
+[32m2024-05-04:00:07:32[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.5624275803565979[0m
+[32m2024-05-04:00:08:53[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.10626896470785141[0m
+[32m2024-05-04:00:10:16[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 24, Loss:  0.3054601848125458[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-04:00:11:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2907397747039795[0m
+[32m2024-05-04:00:11:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24914312362670898[0m
+[32m2024-05-04:00:11:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3483700752258301[0m
+[32m2024-05-04:00:11:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.35483384132385254[0m
+[32m2024-05-04:00:11:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3283553123474121[0m
+[32m2024-05-04:00:11:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2705831527709961[0m
+[32m2024-05-04:00:11:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.2209615707397461[0m
+[32m2024-05-04:00:11:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.1995396614074707[0m
+[32m2024-05-04:00:11:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.26349329948425293[0m
+[32m2024-05-04:00:11:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24535799026489258[0m
+[32m2024-05-04:00:11:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2283473014831543[0m
+[32m2024-05-04:00:11:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31595826148986816[0m
+[32m2024-05-04:00:11:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.2925443649291992[0m
+[32m2024-05-04:00:11:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21866369247436523[0m
+[32m2024-05-04:00:11:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.2646324634552002[0m
+[32m2024-05-04:00:11:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.33155107498168945[0m
+[32m2024-05-04:00:11:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.270233154296875[0m
+[32m2024-05-04:00:11:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3423726558685303[0m
+[32m2024-05-04:00:11:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.27353954315185547[0m
+[32m2024-05-04:00:11:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.25151610374450684[0m
+[32m2024-05-04:00:11:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26952624320983887[0m
+[32m2024-05-04:00:11:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.314929723739624[0m
+[32m2024-05-04:00:11:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.22668886184692383[0m
+[32m2024-05-04:00:11:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.26384639739990234[0m
+[32m2024-05-04:00:11:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.29204511642456055[0m
+[32m2024-05-04:00:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.24944615364074707[0m
+[32m2024-05-04:00:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2726900577545166[0m
+[32m2024-05-04:00:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2911057472229004[0m
+[32m2024-05-04:00:11:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2753136157989502[0m
+[32m2024-05-04:00:11:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2808403968811035[0m
+[32m2024-05-04:00:11:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27409982681274414[0m
+[32m2024-05-04:00:11:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.30794787406921387[0m
+[32m2024-05-04:00:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2882657051086426[0m
+[32m2024-05-04:00:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2961869239807129[0m
+[32m2024-05-04:00:11:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2633991241455078[0m
+[32m2024-05-04:00:11:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20804119110107422[0m
+[32m2024-05-04:00:11:13[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_24/val-da.json .[0m
+[32m2024-05-04:00:11:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.3515036106109619[0m
+[32m2024-05-04:00:12:38[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.7290700078010559[0m
+[32m2024-05-04:00:13:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.40059205889701843[0m
+[32m2024-05-04:00:15:24[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.8364484310150146[0m
+[32m2024-05-04:00:16:46[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.25058943033218384[0m
+[32m2024-05-04:00:18:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.43771564960479736[0m
+[32m2024-05-04:00:19:28[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.20555904507637024[0m
+[32m2024-05-04:00:20:48[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.856909990310669[0m
+[32m2024-05-04:00:22:13[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 25, Loss:  0.4286579489707947[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-04:00:22:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.30210137367248535[0m
+[32m2024-05-04:00:22:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2490861415863037[0m
+[32m2024-05-04:00:22:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3220255374908447[0m
+[32m2024-05-04:00:23:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.3551912307739258[0m
+[32m2024-05-04:00:23:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3272891044616699[0m
+[32m2024-05-04:00:23:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.27167248725891113[0m
+[32m2024-05-04:00:23:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.22101116180419922[0m
+[32m2024-05-04:00:23:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2635936737060547[0m
+[32m2024-05-04:00:23:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.26436471939086914[0m
+[32m2024-05-04:00:23:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.24495172500610352[0m
+[32m2024-05-04:00:23:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2285470962524414[0m
+[32m2024-05-04:00:23:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3145735263824463[0m
+[32m2024-05-04:00:23:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.29459095001220703[0m
+[32m2024-05-04:00:23:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21940326690673828[0m
+[32m2024-05-04:00:23:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.26488256454467773[0m
+[32m2024-05-04:00:23:03[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.32944583892822266[0m
+[32m2024-05-04:00:23:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.29345083236694336[0m
+[32m2024-05-04:00:23:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3157005310058594[0m
+[32m2024-05-04:00:23:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.27098727226257324[0m
+[32m2024-05-04:00:23:04[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24915289878845215[0m
+[32m2024-05-04:00:23:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2701144218444824[0m
+[32m2024-05-04:00:23:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3162715435028076[0m
+[32m2024-05-04:00:23:05[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24975037574768066[0m
+[32m2024-05-04:00:23:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2870810031890869[0m
+[32m2024-05-04:00:23:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2914011478424072[0m
+[32m2024-05-04:00:23:06[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.27116918563842773[0m
+[32m2024-05-04:00:23:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2734706401824951[0m
+[32m2024-05-04:00:23:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.29105210304260254[0m
+[32m2024-05-04:00:23:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.27384114265441895[0m
+[32m2024-05-04:00:23:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27956199645996094[0m
+[32m2024-05-04:00:23:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.27376508712768555[0m
+[32m2024-05-04:00:23:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.3076012134552002[0m
+[32m2024-05-04:00:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.28690552711486816[0m
+[32m2024-05-04:00:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.29204344749450684[0m
+[32m2024-05-04:00:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26706957817077637[0m
+[32m2024-05-04:00:23:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20896220207214355[0m
+[32m2024-05-04:00:23:10[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_25/val-da.json .[0m
+[32m2024-05-04:00:23:10[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.24115756154060364[0m
+[32m2024-05-04:00:24:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.5241336226463318[0m
+[32m2024-05-04:00:25:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.6345033049583435[0m
+[32m2024-05-04:00:27:22[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.6422179341316223[0m
+[32m2024-05-04:00:28:41[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.658523440361023[0m
+[32m2024-05-04:00:30:04[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.20924262702465057[0m
+[32m2024-05-04:00:31:23[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.37628045678138733[0m
+[32m2024-05-04:00:32:42[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.5662207007408142[0m
+[32m2024-05-04:00:34:05[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 26, Loss:  0.5244375467300415[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-04:00:34:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.27337002754211426[0m
+[32m2024-05-04:00:34:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2457578182220459[0m
+[32m2024-05-04:00:34:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.2971818447113037[0m
+[32m2024-05-04:00:34:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.35169076919555664[0m
+[32m2024-05-04:00:34:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.3263428211212158[0m
+[32m2024-05-04:00:34:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26905369758605957[0m
+[32m2024-05-04:00:34:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21984219551086426[0m
+[32m2024-05-04:00:34:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.19818425178527832[0m
+[32m2024-05-04:00:34:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2653679847717285[0m
+[32m2024-05-04:00:34:54[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.241044282913208[0m
+[32m2024-05-04:00:34:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.2253706455230713[0m
+[32m2024-05-04:00:34:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3119649887084961[0m
+[32m2024-05-04:00:34:55[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28943562507629395[0m
+[32m2024-05-04:00:34:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21884989738464355[0m
+[32m2024-05-04:00:34:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.26342034339904785[0m
+[32m2024-05-04:00:34:56[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.34824681282043457[0m
+[32m2024-05-04:00:34:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2673943042755127[0m
+[32m2024-05-04:00:34:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33341312408447266[0m
+[32m2024-05-04:00:34:57[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.2675487995147705[0m
+[32m2024-05-04:00:34:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24700665473937988[0m
+[32m2024-05-04:00:34:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2698402404785156[0m
+[32m2024-05-04:00:34:58[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3121006488800049[0m
+[32m2024-05-04:00:34:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.31049060821533203[0m
+[32m2024-05-04:00:34:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.26130032539367676[0m
+[32m2024-05-04:00:34:59[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2888813018798828[0m
+[32m2024-05-04:00:35:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2691023349761963[0m
+[32m2024-05-04:00:35:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26834702491760254[0m
+[32m2024-05-04:00:35:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2622489929199219[0m
+[32m2024-05-04:00:35:00[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2679426670074463[0m
+[32m2024-05-04:00:35:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2736670970916748[0m
+[32m2024-05-04:00:35:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2720303535461426[0m
+[32m2024-05-04:00:35:01[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.24028801918029785[0m
+[32m2024-05-04:00:35:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.28369927406311035[0m
+[32m2024-05-04:00:35:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.28839826583862305[0m
+[32m2024-05-04:00:35:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2620964050292969[0m
+[32m2024-05-04:00:35:02[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2063889503479004[0m
+[32m2024-05-04:00:35:03[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_26/val-da.json .[0m
+[32m2024-05-04:00:35:03[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.20911036431789398[0m
+[32m2024-05-04:00:36:20[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.21810860931873322[0m
+[32m2024-05-04:00:37:42[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.5488506555557251[0m
+[32m2024-05-04:00:38:59[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.7558843493461609[0m
+[32m2024-05-04:00:40:21[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.009474962949752808[0m
+[32m2024-05-04:00:41:37[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.273004949092865[0m
+[32m2024-05-04:00:42:54[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.7868096828460693[0m
+[32m2024-05-04:00:44:08[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  1.256875991821289[0m
+[32m2024-05-04:00:45:25[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 27, Loss:  0.20834827423095703[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-04:00:46:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.2556772232055664[0m
+[32m2024-05-04:00:46:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2465522289276123[0m
+[32m2024-05-04:00:46:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3176240921020508[0m
+[32m2024-05-04:00:46:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.2620127201080322[0m
+[32m2024-05-04:00:46:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32556962966918945[0m
+[32m2024-05-04:00:46:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26796841621398926[0m
+[32m2024-05-04:00:46:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.2183067798614502[0m
+[32m2024-05-04:00:46:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.19865846633911133[0m
+[32m2024-05-04:00:46:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2188560962677002[0m
+[32m2024-05-04:00:46:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.2398059368133545[0m
+[32m2024-05-04:00:46:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22517824172973633[0m
+[32m2024-05-04:00:46:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.311539888381958[0m
+[32m2024-05-04:00:46:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28891563415527344[0m
+[32m2024-05-04:00:46:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21769452095031738[0m
+[32m2024-05-04:00:46:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.2614016532897949[0m
+[32m2024-05-04:00:46:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.3042304515838623[0m
+[32m2024-05-04:00:46:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2685050964355469[0m
+[32m2024-05-04:00:46:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.3321366310119629[0m
+[32m2024-05-04:00:46:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.26726818084716797[0m
+[32m2024-05-04:00:46:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24696731567382812[0m
+[32m2024-05-04:00:46:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26814723014831543[0m
+[32m2024-05-04:00:46:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31101393699645996[0m
+[32m2024-05-04:00:46:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24631142616271973[0m
+[32m2024-05-04:00:46:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28248167037963867[0m
+[32m2024-05-04:00:46:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.288421630859375[0m
+[32m2024-05-04:00:46:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.2682912349700928[0m
+[32m2024-05-04:00:46:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.26607728004455566[0m
+[32m2024-05-04:00:46:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.26106834411621094[0m
+[32m2024-05-04:00:46:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.26724958419799805[0m
+[32m2024-05-04:00:46:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.2744414806365967[0m
+[32m2024-05-04:00:46:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2684605121612549[0m
+[32m2024-05-04:00:46:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.25998687744140625[0m
+[32m2024-05-04:00:46:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2832491397857666[0m
+[32m2024-05-04:00:46:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.28791236877441406[0m
+[32m2024-05-04:00:46:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2608604431152344[0m
+[32m2024-05-04:00:46:18[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.2065105438232422[0m
+[32m2024-05-04:00:46:18[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_27/val-da.json .[0m
+[32m2024-05-04:00:46:18[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.5864471197128296[0m
+[32m2024-05-04:00:47:39[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.6962293982505798[0m
+[32m2024-05-04:00:48:57[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.4766896069049835[0m
+[32m2024-05-04:00:50:17[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.8661836385726929[0m
+[32m2024-05-04:00:51:35[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.687444269657135[0m
+[32m2024-05-04:00:52:53[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.5872331857681274[0m
+[32m2024-05-04:00:54:11[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.3433578908443451[0m
+[32m2024-05-04:00:55:32[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.6695118546485901[0m
+[32m2024-05-04:00:56:56[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 28, Loss:  0.22539328038692474[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-04:00:57:42[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.28827476501464844[0m
+[32m2024-05-04:00:57:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.24514985084533691[0m
+[32m2024-05-04:00:57:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.31740260124206543[0m
+[32m2024-05-04:00:57:43[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.3085932731628418[0m
+[32m2024-05-04:00:57:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32389163970947266[0m
+[32m2024-05-04:00:57:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.26822757720947266[0m
+[32m2024-05-04:00:57:44[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21863412857055664[0m
+[32m2024-05-04:00:57:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.2616744041442871[0m
+[32m2024-05-04:00:57:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.2623746395111084[0m
+[32m2024-05-04:00:57:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23793911933898926[0m
+[32m2024-05-04:00:57:45[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22575807571411133[0m
+[32m2024-05-04:00:57:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.3107328414916992[0m
+[32m2024-05-04:00:57:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.24573540687561035[0m
+[32m2024-05-04:00:57:46[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.2175610065460205[0m
+[32m2024-05-04:00:57:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.2617354393005371[0m
+[32m2024-05-04:00:57:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.30269432067871094[0m
+[32m2024-05-04:00:57:47[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.2668173313140869[0m
+[32m2024-05-04:00:57:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33195042610168457[0m
+[32m2024-05-04:00:57:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.2664611339569092[0m
+[32m2024-05-04:00:57:48[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24644732475280762[0m
+[32m2024-05-04:00:57:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.2683897018432617[0m
+[32m2024-05-04:00:57:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.3118422031402588[0m
+[32m2024-05-04:00:57:49[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24528002738952637[0m
+[32m2024-05-04:00:57:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.2862827777862549[0m
+[32m2024-05-04:00:57:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.28725647926330566[0m
+[32m2024-05-04:00:57:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.22502923011779785[0m
+[32m2024-05-04:00:57:50[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2667555809020996[0m
+[32m2024-05-04:00:57:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2614099979400635[0m
+[32m2024-05-04:00:57:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2676975727081299[0m
+[32m2024-05-04:00:57:51[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27394556999206543[0m
+[32m2024-05-04:00:57:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.2680344581604004[0m
+[32m2024-05-04:00:57:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.25995373725891113[0m
+[32m2024-05-04:00:57:52[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.28429412841796875[0m
+[32m2024-05-04:00:57:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.26630568504333496[0m
+[32m2024-05-04:00:57:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.2616708278656006[0m
+[32m2024-05-04:00:57:53[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20661497116088867[0m
+[32m2024-05-04:00:57:53[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_28/val-da.json .[0m
+[32m2024-05-04:00:57:54[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.22849714756011963[0m
+[32m2024-05-04:00:59:15[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.5579063892364502[0m
+[32m2024-05-04:01:00:34[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.586063027381897[0m
+[32m2024-05-04:01:01:53[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.14197154343128204[0m
+[32m2024-05-04:01:03:14[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.28681522607803345[0m
+[32m2024-05-04:01:04:32[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.4766123592853546[0m
+[32m2024-05-04:01:05:51[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.35456570982933044[0m
+[32m2024-05-04:01:07:07[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.3438405394554138[0m
+[32m2024-05-04:01:08:25[0m | [36m__main__[0m[36m:line 165[0m: [1mEpoch: 29, Loss:  0.10043585300445557[0m
+/home2/rafaelgetto/miniconda3/envs/cola/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 10, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m2024-05-04:01:09:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 0	FLAN_1 time: 0.26945972442626953[0m
+[32m2024-05-04:01:09:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 1	FLAN_1 time: 0.2461833953857422[0m
+[32m2024-05-04:01:09:07[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 2	FLAN_1 time: 0.3390810489654541[0m
+[32m2024-05-04:01:09:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 3	FLAN_1 time: 0.30556821823120117[0m
+[32m2024-05-04:01:09:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 4	FLAN_1 time: 0.32279133796691895[0m
+[32m2024-05-04:01:09:08[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 5	FLAN_1 time: 0.2697880268096924[0m
+[32m2024-05-04:01:09:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 6	FLAN_1 time: 0.21816349029541016[0m
+[32m2024-05-04:01:09:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 7	FLAN_1 time: 0.19800090789794922[0m
+[32m2024-05-04:01:09:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 8	FLAN_1 time: 0.262035608291626[0m
+[32m2024-05-04:01:09:09[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 9	FLAN_1 time: 0.23857426643371582[0m
+[32m2024-05-04:01:09:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 10	FLAN_1 time: 0.22600746154785156[0m
+[32m2024-05-04:01:09:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 11	FLAN_1 time: 0.31122875213623047[0m
+[32m2024-05-04:01:09:10[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 12	FLAN_1 time: 0.28868627548217773[0m
+[32m2024-05-04:01:09:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 13	FLAN_1 time: 0.21788358688354492[0m
+[32m2024-05-04:01:09:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 14	FLAN_1 time: 0.26154470443725586[0m
+[32m2024-05-04:01:09:11[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 15	FLAN_1 time: 0.3024599552154541[0m
+[32m2024-05-04:01:09:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 16	FLAN_1 time: 0.26782941818237305[0m
+[32m2024-05-04:01:09:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 17	FLAN_1 time: 0.33197784423828125[0m
+[32m2024-05-04:01:09:12[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 18	FLAN_1 time: 0.37625646591186523[0m
+[32m2024-05-04:01:09:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 19	FLAN_1 time: 0.24634981155395508[0m
+[32m2024-05-04:01:09:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 20	FLAN_1 time: 0.26792144775390625[0m
+[32m2024-05-04:01:09:13[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 21	FLAN_1 time: 0.31115031242370605[0m
+[32m2024-05-04:01:09:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 22	FLAN_1 time: 0.24644231796264648[0m
+[32m2024-05-04:01:09:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 23	FLAN_1 time: 0.28281307220458984[0m
+[32m2024-05-04:01:09:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 24	FLAN_1 time: 0.2886791229248047[0m
+[32m2024-05-04:01:09:14[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 25	FLAN_1 time: 0.22616243362426758[0m
+[32m2024-05-04:01:09:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 26	FLAN_1 time: 0.2672460079193115[0m
+[32m2024-05-04:01:09:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 27	FLAN_1 time: 0.2612593173980713[0m
+[32m2024-05-04:01:09:15[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 28	FLAN_1 time: 0.2672760486602783[0m
+[32m2024-05-04:01:09:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 29	FLAN_1 time: 0.27457714080810547[0m
+[32m2024-05-04:01:09:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 30	FLAN_1 time: 0.26784181594848633[0m
+[32m2024-05-04:01:09:16[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 31	FLAN_1 time: 0.2803936004638672[0m
+[32m2024-05-04:01:09:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 32	FLAN_1 time: 0.2830698490142822[0m
+[32m2024-05-04:01:09:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 33	FLAN_1 time: 0.2882397174835205[0m
+[32m2024-05-04:01:09:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 34	FLAN_1 time: 0.26096534729003906[0m
+[32m2024-05-04:01:09:17[0m | [36m__main__[0m[36m:line 258[0m: [1mBatch: 35	FLAN_1 time: 0.20643019676208496[0m
+[32m2024-05-04:01:09:18[0m | [36m__main__[0m[36m:line 278[0m: [1mPredictions written to /ssd_scratch/cvit/rafaelgetto/predictions/flan_base_aok_blip_ofa_1/epoch_29/val-da.json .[0m
+wandb: - 0.006 MB of 0.006 MB uploadedwandb: \ 0.006 MB of 0.006 MB uploadedwandb: | 0.006 MB of 0.006 MB uploadedwandb: / 0.006 MB of 0.006 MB uploadedwandb: - 0.006 MB of 0.006 MB uploadedwandb: \ 0.006 MB of 0.006 MB uploadedwandb: | 0.648 MB of 1.840 MB uploaded (0.001 MB deduped)wandb: / 0.648 MB of 1.844 MB uploaded (0.001 MB deduped)wandb: - 1.844 MB of 1.844 MB uploaded (0.001 MB deduped)wandb: \ 1.844 MB of 1.844 MB uploaded (0.001 MB deduped)wandb: | 1.844 MB of 1.844 MB uploaded (0.001 MB deduped)wandb: 
+wandb: Run history:
+wandb: Training Loss █▃▃▃▃▄▃▃▄▂▂▄▃▃▂▂▃▂▄▂▂▃▃▂▂▃▁▁▁▁▁▁▂▁▁▂▁▁▁▂
+wandb: 
+wandb: Run summary:
+wandb: Training Loss 0.51782
+wandb: 
+wandb: 🚀 View run flan_base_aok_blip_ofa_1 at: https://wandb.ai/white_eagle/fine_tune_flan/runs/flan_base_aok_blip_ofa_1
+wandb: ⭐️ View project at: https://wandb.ai/white_eagle/fine_tune_flan
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240503_191649-flan_base_aok_blip_ofa_1/logs
+sending incremental file list
+rsync: mkdir "/share3/rafaelgetto" failed: No such file or directory (2)
+rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.2]
+sending incremental file list
+rsync: mkdir "/share3/rafaelgetto" failed: No such file or directory (2)
+rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.2]
+deactivate environment
